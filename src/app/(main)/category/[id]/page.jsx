@@ -11,7 +11,7 @@ export default async function NewsDetailPageId({ params }) {
           <LeftSIdeber id={id} />
         </aside>
 
-        <main className='rounded-2xl bg-pink-100 p-6 md:col-span-6'>
+        <main className='rounded-2xl border border-slate-200 bg-slate-50 p-6 md:col-span-6'>
           <h2 className='border-b border-slate-200 pb-3 text-xl font-bold text-slate-800'>
             Dragon News Home
           </h2>
