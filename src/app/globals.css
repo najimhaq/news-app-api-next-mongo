@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import '@heroui/styles';
+@plugin "daisyui";
+
+:root {
+  /* Override any color variable */
+  --accent: oklch(0.7 0.25 260);
+  --success: oklch(0.65 0.15 155);
+  --font-poppins: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+  font-family: var(--font-poppins);
+}
+
+/* styles/signup.css / বা globals.css */
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* অথবা Tailwind‑compatible */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
