@@ -1,14 +1,20 @@
 import Link from 'next/link';
 async function getAllCategory() {
   const res = await fetch(
-    'https://openapi.programming-hero.com/api/news/categories'
+    `https://openapi.programming-hero.com/api/news/categories`,
+    { cache: 'no-store' }
   );
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch category list`);
+  }
+
   const data = await res.json();
   return data.data.news_category;
 }
-export default async function LeftSIdeber() {
+export default async function LeftSIdeber({ id }) {
   const categories = await getAllCategory();
-  const activeCategoryId = '01';
+  const activeCategoryId = id || '01';
   return (
     <div className='rounded-2xl border border-slate-200 bg-slate-50 p-5'>
       <h2 className='border-b border-slate-200 pb-3 text-xl font-bold text-slate-800'>

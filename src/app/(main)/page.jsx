@@ -11,7 +11,6 @@ export default async function Homepage() {
         </aside>
 
         <main className='rounded-2xl bg-pink-100 p-6 md:col-span-6'>
-          Dragon News Home
           <MainNews />
         </main>
 
