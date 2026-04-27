@@ -1,6 +1,6 @@
 import Header from '../components/header/page';
 import Navbar from '../components/navbar/Navbar';
-import BreakingNews from '../components/news/BreakingNews';
+import BreakingNews from '../components/breakingnews/BreakingNews';
 
 const MainLayout = ({ children }) => {
   return (

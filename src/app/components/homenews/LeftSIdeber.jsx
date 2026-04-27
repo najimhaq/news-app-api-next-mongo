@@ -1,17 +1,6 @@
+import { getAllCategory } from '@/app/lib/data';
 import Link from 'next/link';
-async function getAllCategory() {
-  const res = await fetch(
-    `https://openapi.programming-hero.com/api/news/categories`,
-    { cache: 'no-store' }
-  );
 
-  if (!res.ok) {
-    throw new Error(`Failed to fetch category list`);
-  }
-
-  const data = await res.json();
-  return data.data.news_category;
-}
 export default async function LeftSIdeber({ id }) {
   const categories = await getAllCategory();
   const activeCategoryId = id || '01';
