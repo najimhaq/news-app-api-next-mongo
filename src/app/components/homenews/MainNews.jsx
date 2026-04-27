@@ -7,7 +7,7 @@ import { IoIosStar } from 'react-icons/io';
 export default async function MainNews({ id }) {
   const categoryId = id || '01';
   const newsData = await getCategoryNews(categoryId);
-  console.log(newsData);
+
 
   return (
     <section className='container mx-auto px-4 py-8'>

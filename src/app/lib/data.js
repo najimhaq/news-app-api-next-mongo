@@ -30,9 +30,7 @@ export async function getCategoryNews(categoryId) {
 // app/lib/data.js
 export async function getNewsById(news_id) {
   const url = `https://openapi.programming-hero.com/api/news/${news_id}`;
-
   // console.log('Fetching URL:', url); // Debug
-
   const res = await fetch(url, { cache: 'no-store' });
 
   if (!res.ok) {

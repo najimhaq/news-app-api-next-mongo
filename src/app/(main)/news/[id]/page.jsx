@@ -6,6 +6,16 @@ import Link from 'next/link';
 
 import { IoArrowBack } from 'react-icons/io5';
 
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  const news = await getNewsById(id);
+
+  return {
+    title: `${news?.title || 'News Details'}`,
+    description: news?.details?.substring(0, 160) || 'Read the latest news and updates.',
+  };
+};
+
 const NewsDetailsPage = async ({ params }) => {
   const { id } = await params;
 
@@ -50,7 +60,7 @@ const NewsDetailsPage = async ({ params }) => {
           <Link href={`/category/${news.category_id}`}>
             <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'>
               <div className='flex justify-center items-center gap-2'>
-                <IoArrowBack className='font-bold'/>
+                <IoArrowBack className='font-bold' />
                 All news in this category
               </div>
             </button>

@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Dragon News - Career',
+  description: 'Join our team and be part of the future of news.',
+};
 const CareerPage = () => {
   return (
     <div>

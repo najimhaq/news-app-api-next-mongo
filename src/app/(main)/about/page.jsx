@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Dragon News - About Us',
+  description: 'Best news portal in Bangladesh',
+};
 const AboutPage = () => {
   return (
     <div>
